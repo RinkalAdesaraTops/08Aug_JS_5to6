@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Function Example</h3>
+    <script>
+      /*const add = function(){
+        //code
+       }  */
+         const add = ()=>{
+            let a=25;
+            let b=35
+            document.write("<br> Addition is "+(a+b))
+        }
+        /*function add(){
+            let a=25;
+            let b=35
+            document.write("<br> Addition is "+(a+b))
+        } */
+        //take something,return nothing
+        /*function minus(p,q){
+            document.write("<br> Minus is "+(p-q))
+        } */
+         const minus = (p,q) => document.write("<br> Minus is "+(p-q))  //fat arrow function
+        //take nothing,return something
+        function multiply(){
+            let p=25
+            let q=5
+            return p*q
+        }
+        //take something,return something
+        /* function cube(r){
+            return r**3
+        } */
+         const cube1 = (r)=>{
+            return r**3
+         }  
+         const cube = r => r**3; 
+
+        add()
+        minus(300,200)
+
+        let ans = multiply()
+        document.write("<br> Multiply is "+multiply())
+        document.write("<br> Cube is "+cube(4))
+    </script>
+</body>
+</html>

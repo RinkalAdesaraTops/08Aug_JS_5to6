@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        add()
+        
+    //take Nothing return nothing    
+    function add(){
+        function minus(){
+
+        }
+        let a=25
+        let b=35
+        document.write("Addition is "+(a+b))
+    }
+//take nothing return something
+    function area(){
+        const pi=3.14
+        let r =2.5
+        return pi*r*r
+    }
+
+    
+    //let res = area()
+    document.write("<br> Area of circle is "+area())
+    //take something return nothing
+    function multiply(a,b){
+        document.write("<br> MUltiply is "+a*b)        
+    }
+    multiply(3,6) //pure function 
+    //take s RS
+    function cube(r){
+        return r**3;
+    }
+    document.write("<br> Cube is "+cube(5))
+    </script>
+</body>
+</html>

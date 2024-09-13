@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const isEven = (no)=>{
+            return no%2==0
+        }
+        const Hof = (func,n)=>{
+                let r = func(n) //isEven(3)
+                if(r){
+                    document.write("No is even")
+                } else {
+                    document.write("No is odd")
+                }
+        }
+        Hof(isEven,3)
+    </script>
+</body>
+</html>

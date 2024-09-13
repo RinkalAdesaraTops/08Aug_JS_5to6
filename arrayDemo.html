@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = [10,20,30,40] 
+        a.push(44)
+        a.push(55) //last position add
+
+        for(var x in a){
+            document.write('<br> '+a[x])     
+        }
+        document.write('<br> POP func-----')
+        a.pop()//last position remove
+        
+        for(var x in a){
+            document.write('<br> '+a[x])     
+        }
+        a.unshift(100)
+document.write('<br> ----------------------')
+
+        for(var x in a){
+            document.write('<br> '+a[x])     
+        }
+        a.shift()
+        document.write('<br> ----------------------')
+
+        for(var x in a){
+            document.write('<br> '+a[x])     
+        }
+        //splice 
+        a.splice(2,0,33,34,35,36)
+        document.write('<br> ----------------------')
+
+        for(var x in a){
+            document.write('<br> '+a[x])     
+        }
+        a.splice(3,2)
+        document.write('<br> ----------------------')
+
+for(var x in a){
+    document.write('<br> '+a[x])     
+}
+//slice - positionwise data get
+let res = a.slice(3)
+document.write('<br> -----------------------')
+document.write('<br> '+res)
+
+res = a.slice(-2)
+document.write('<br> -----------------------')
+document.write('<br> '+res)
+
+res = a.slice(2,6)
+document.write('<br> -----------------------')
+document.write('<br> '+res)
+
+res = a.slice(-5,-2)
+document.write('<br> -----------------------')
+document.write('<br> '+res)
+document.write('<br> -----------------------')
+
+delete a[2]
+document.write('<br> '+a)
+
+    </script>
+</body>
+</html>

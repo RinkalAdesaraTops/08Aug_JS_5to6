@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       //object
+       let user = {
+            "name":"Rinkal",
+            "age":26,
+            "salary":30000,
+            "display":function(){
+                return this.name+"----"+this.age
+            }
+       }
+    // document.write('<br> Name is '+user['name'])
+       document.write('<br> Info is '+user.display())
+       document.write('<br> salary is '+user.salary)
+       
+    </script>
+</body>
+</html>

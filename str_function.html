@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "Hi Hello How are you Hi dkjfghdfg Hi sjdkfg              "
+        let str2 = "fds"
+        let str3 = "xyzdsfg"
+        document.write("<br> Length is "+str.length)
+        document.write("<br> Uppercase is "+str.toUpperCase())
+        document.write("<br> Lowercase is "+str.toLowerCase())
+        document.write("<br> slice is "+str.slice(2,8))
+        document.write("<br> substr is "+str.substr(2,8))
+        document.write("<br> merge is "+str.concat(" @ ",str2," @shdf@ ",str3))
+        let newstr = str.replaceAll(/hi/gi,"WHO")
+        document.write("<br> New str is "+newstr.length)
+        document.write("<br> New str is "+newstr.trim().length)
+        document.write("<br> New str is "+newstr.trimStart().length)
+        document.write("<br> New str is "+newstr.trimEnd().length)
+
+        document.write("<br> pad start str is "+str2.padEnd(6,"@$"))
+
+        document.write("<br> New str is "+str2.charAt(1))
+        document.write("<br> New str is "+str2.charCodeAt(1))
+
+
+
+    </script>
+</body>
+</html>

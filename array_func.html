@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [10,20,30,40,50]
+        document.write(arr)
+        document.write("<br><br>")
+        arr.push(55) //last position one element add
+        document.write(arr)
+        document.write("<br><br>")
+
+        arr.push(22) //last position one element add
+        document.write(arr)
+
+        document.write("<br><br>")
+
+        arr.pop() //last position one element delete
+        document.write(arr)
+
+        arr.unshift(100)
+        document.write("<br><br>")
+        document.write(arr)
+        arr.shift()
+        document.write("<br><br>")
+        document.write(arr)
+
+        delete arr[2]
+        document.write("<br><br>")
+        document.write(arr)
+
+
+        arr.splice(2,2,11,551,66,88)
+        document.write("<br><br>")
+        document.write(arr)
+
+        let n = arr.slice(3)
+        document.write("<br><br>")
+        document.write(n)
+
+        n = arr.slice(3,7)
+        document.write("<br><br>")
+        document.write(n)
+
+        n = arr.slice(-5,-2)
+        document.write("<br><br>")
+        document.write(n)
+
+        let str = [44,2,3,66,770,490,100,25]
+
+        //str = ["xyz","pqr","abc","hdsfg"]
+        document.write("<br><br>")
+        document.write(str.sort((a,b)=>{
+                //return a-b //44-2 = 42 2,44  2-3 = -1 -->
+                return b-a
+        }))
+
+        document.write("<br><br>")
+        document.write(str.reverse())
+
+        console.log(str.includes(660))
+        console.log(str.indexOf(770))
+
+
+
+
+    </script>
+</body>
+</html>

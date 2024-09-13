@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="first.js"></script>
+</head>
+<body>
+    <h3>My First JS Lecture</h3>
+    <div id="demo"></div>
+    <div id="demo1"></div>
+    <img src="" alt="" height="50px" width="50px" id="image">
+    <p>Hello</p>
+    <p id="txt">Hii</p>
+    <p id="txt">Hii</p>
+    <p id="txt">Hii</p>
+    <p id="txt">Hii</p>
+    <script>
+        document.getElementById('demo').innerHTML = "<b style='color:white'>HTML Content</b>"
+        document.getElementById('demo').innerHTML += "<b>HTML dfjkgh dffkhgdfg</b>"
+        document.getElementById('demo1').innerText = "<b>HTML Content</b>"
+        document.getElementById('demo').style.color = "yellow"
+        document.getElementById('demo').style.backgroundColor = "red"
+        document.getElementById('image').src = "baner-1.png"
+
+        let res = document.getElementsByTagName("p")
+        for(let i=0;i<res.length;i++){
+            if((i+1)%2==0)
+                res[i].style.color = "purple"
+            else
+                res[i].style.color = "blue"
+
+        }   
+
+        
+    </script>
+    <!-- <script src="operator.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [10,20,30,40,50,40]
+        console.log(arr[1])
+        /*for(let i=0;i<arr.length;i++){
+            document.write(arr[i]+" <br>")
+        } 
+
+        arr.forEach((i,index)=>{
+            document.write("index "+index+" is "+i+" <br>")
+        })*/
+        let a = arr.map((i)=>{
+            return i*2;
+        })
+        
+        document.write(a)
+        //always return array
+        /*let b = arr.filter((i)=>{
+            return i == 40
+        })
+        document.write(b)
+        console.log(b)  */
+        let arr1 = [11,22,33,44,55,67]
+        let b = arr1.filter((i)=>{
+            return i%2!= 0
+        })
+        document.write(b)
+        console.log(b) 
+        //reduce function 
+        let new_arr = [1,2,3,4,5]
+        let t = new_arr.reduce((total,a)=>{
+                console.log("total is "+total)
+                console.log("A is "+a)
+                return total+a
+        })
+        console.log("T is "+t)
+
+         t = new_arr.reduceRight((total,a)=>{
+            console.log("total gcfh is "+total)
+            console.log("A dfg is "+a)
+            return total+a
+    })
+    console.log("T gdfg is "+t)
+    </script>
+</body>
+</html>

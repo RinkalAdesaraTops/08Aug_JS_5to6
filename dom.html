@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="demo1"></div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis debitis quo incidunt praesentium, velit consequatur iusto eveniet ad officia, corporis iste est, magnam non harum illo! Accusamus asperiores rerum nemo.</p>
+
+    <p>kjfdgh jkdfghd jkdfghkjdfh</p>
+    <img src="" alt="" id="image" height="80px" width="80px">
+
+    <span class="abc">hello hfgdkjg kjdfghjkdf</span>
+    <span class="abc">hello hfgdkjg kjdfghjkdf</span>
+    <span class="abc">hello hfgdkjg kjdfghjkdf</span>
+    <span class="abc">hello hfgdkjg kjdfghjkdf</span>
+    <script>
+        document.getElementById("demo").innerHTML = "<b>Hello test</b>";
+        document.getElementById("demo").innerHTML += "<p id='txt'>HHii</p>";
+        document.getElementById("demo1").innerText = "<b>Hello test</b>";
+        document.getElementById("demo1").innerHTML += "<p>Hello test</p>";
+        document.getElementById("image").src="baner-1.png";
+        document.getElementById("txt").style.color = "yellow"
+        document.getElementById("txt").style.backgroundColor = "green"
+
+        let tr = document.getElementsByTagName("p")
+       for(let i=0;i<tr.length;i++){
+            if((i+1)%2==0)
+                tr[i].style.color = "pink"
+            else
+                tr[i].style.color = "blue"
+        }
+
+        let pr = document.getElementsByClassName("abc")
+        for(let i=0;i<pr.length;i++){
+            if((i+1)%2==0)
+                pr[i].style.color = "green"
+            else
+                pr[i].style.color = "red"
+        }
+    </script>
+</body>
+</html>

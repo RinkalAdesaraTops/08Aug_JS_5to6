@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const add = ()=>{
+            let a=25
+            let b=35
+            document.write("Addition is "+(a+b))
+        }
+        add()
+        /*function area(){
+            const pi=3.14
+            let r =2.5
+            return pi*r*r
+        } */
+         //js Hoisting - if dont support then it will return reference error
+         x=25
+        //console.log(pi)
+        const pi=3.14
+        let r =2.5
+        var x=45
+        const area = ()=> pi*r*r //fat arrow function
+        document.write("<br> Area of circle is "+area())
+
+        /*function cube(r){
+            return r**3;
+        } */
+        let cube = (r,s) => r**3
+        document.write("<br> Cube is "+cube(5))
+    </script>
+</body>
+</html>

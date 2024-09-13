@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //map,filter,find,reduce,reduceRight
+        let arr = [10,20,30,40,20]
+        //map function
+        let res = arr.map((i)=>{
+            return i*2
+        })
+        console.log(arr);
+        console.log(res);
+        let ans = arr.filter((i)=>{
+            return i==20
+        })
+        console.log(ans);
+        ans = arr.find((i)=>{
+            return i==20
+        })
+        console.log(ans);
+//reduce
+        let result = arr.reduceRight((total,a)=>{
+            console.log("total "+total);
+            console.log("a is "+a);
+            
+            return total+a
+        },100)
+        
+        console.log(result);
+//         console.log("Foreach loop");
+        
+//         r1 = arr.forEach((i)=>{
+//             console.log(i);
+// return i
+//         })
+//         console.log(r1);
+
+    </script>
+</body>
+</html>
