@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let emp = {
+            id:101,
+            name:"Test",
+            age:25,
+            display:function(){
+                return  this.name+"----"+this.age
+            }
+        }
+        emp.lastname = "abc"
+        document.write('<br> '+emp.display())
+        document.write('<br> '+emp.lastname)
+        document.write('<br> --Employee Information----')
+        for(var x in emp){
+            document.write('<br> '+emp[x])            
+        }       
+        // document.write('<br> Name is '+emp.name)
+        // document.write('<br> Age is '+emp['age'])
+        
+        const arr_obj = [
+            {
+                id:101,
+                name:"Test123",
+                age:25,
+            },
+            {
+                id:102,
+                name:"abc",
+                age:29,
+            },
+            {
+                id:103,
+                name:"xyz",
+                age:19,
+            }
+        ]
+        let result = arr_obj.map((i)=>{
+                        return i.name
+        })
+        document.write('<br> '+result)
+        result = arr_obj.filter((i)=>{
+                return i.age >=20
+        })
+        console.log(result);
+        
+        result = arr_obj.sort((a,b)=>{
+                return a.age-b.age
+        })
+        console.log(result);
+        const arr = ["abc","xyz","pqr","abc","x1","xyz","p2","xyz"]
+        const obj1 = {
+            "abc":2,
+            "xyz":3,
+            "pqr":1,
+            "x1":1,
+            "p2":1
+        }
+
+        
+    </script>
+</body>
+</html>
