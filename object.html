@@ -7,18 +7,33 @@
 </head>
 <body>
     <script>
+        
        //object
        let user = {
             "name":"Rinkal",
             "age":26,
             "salary":30000,
+            "lastname":"Soni",
             "display":function(){
                 return this.name+"----"+this.age
+            },
+            //getter method
+            get getLname(){
+                return this.lastname
+            },
+            //setter method
+            set setLname(userlastname){
+                this.lastname = userlastname
             }
        }
     // document.write('<br> Name is '+user['name'])
        document.write('<br> Info is '+user.display())
        document.write('<br> salary is '+user.salary)
+       document.write('<br> Last name is '+user.getLname)
+       user.setLname = "Adesara"
+       document.write('<br> Last name is '+user.getLname)
+
+       
        
     </script>
 </body>

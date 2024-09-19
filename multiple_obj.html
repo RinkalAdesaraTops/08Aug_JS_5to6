@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Salary</th>          
+            </tr>
+        </thead>
+        <tbody id="userlist">
+
+        </tbody>
+    </table>
+    <script>
+        let users = [
+            {
+                "id":101,
+                "name":"Test",
+                "age":18,
+                "salary":25000
+            },
+            {
+                "id":102,
+                "name":"Xyz",
+                "age":22,
+                "salary":25600
+            },
+            {
+                "id":103,
+                "name":"mbnm",
+                "age":28,
+                "salary":30000
+            },
+            {
+                "id":104,
+                "name":"rtyty",
+                "age":18,
+                "salary":14500
+            },
+            {
+                "id":105,
+                "name":"Tesdfsdfst",
+                "age":25,
+                "salary":35000
+            }
+        ]
+
+        let tr=''
+        let res = users.map((i)=>{
+            // template literal
+                tr += `
+                        <tr>
+                            <td>${i.id}</td>
+                            <td>${i.name}</td>
+                            <td>${i.age}</td>
+                            <td>${i.salary}</td>
+                        </tr>
+                `
+        })
+        document.getElementById('userlist').innerHTML = tr
+    </script>
+</body>
+</html>

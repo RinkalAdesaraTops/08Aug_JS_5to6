@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruits = ["apple","banana","pineapple","orange"]
+        let vegetables = ["onion","potato","tomato"]
+        //spread operator  - ...
+        const [a,b,...c] = fruits //rest of 
+        document.write('<br> A is '+a)
+        document.write('<br> B is '+b)
+        document.write('<br> C is '+c)
+        const merge_array = [...fruits,...vegetables]
+        document.write('<br> '+merge_array)
+        document.write('<br> '+(fruits+vegetables))
+        document.write('<br> '+12+33)
+        
+        
+        
+        
+
+    </script>
+</body>
+</html>

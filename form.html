@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        Number1:
+        <input type="text" name="no1" id="no1"><br><br>
+        Number2:
+        <input type="text" name="no2" id="no2"><br><br>
+        <button onclick="add()">+</button>
+        <button onclick="minus()">-</button><br>
+        Answer is :
+        <div id="ans"></div>
+        <script>
+            const add = ()=>{
+                let n1 = document.getElementById('no1').value
+                let n2 = document.getElementById('no2').value
+                let ans = parseInt(n1)+parseInt(n2)
+                document.getElementById('ans').innerHTML = ans
+                document.getElementById('no1').value = ''
+                document.getElementById('no2').value = ''
+            }
+
+            const minus = ()=>{
+                let n1 = document.getElementById('no1').value
+                let n2 = document.getElementById('no2').value
+                let ans = parseInt(n1)-parseInt(n2)
+                document.getElementById('ans').innerHTML = ans
+                document.getElementById('no1').value = ''
+                document.getElementById('no2').value = ''
+            }
+        </script>
+    
+</body>
+</html>
