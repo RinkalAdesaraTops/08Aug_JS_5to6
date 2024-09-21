@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let emp = {
+            "name":"sdjhfgsj",
+            "age":25,
+            "salary":25000,
+            "display":function(){
+                return this.name+"-----"+this.salary
+            },
+            get getAge(){
+                return this.age;
+            },
+            set setAge(age){
+                this.age = age
+            }
+
+
+        }
+
+        
+        document.write('<br> '+emp.display())
+        document.write('<br> Old AGe is '+emp.getAge)
+        emp.setAge = 29
+        document.write('<br>New  AGe is '+emp.getAge)
+
+        
+        
+        
+    </script>
+</body>
+</html>

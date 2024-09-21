@@ -6,6 +6,16 @@
     <title>Document</title>
 </head>
 <body>
+    <select name="ageorder" id="ageorder" onchange="ageOrder()">
+        <option value="">--Select--</option>
+        <option value="asc">Asc</option>
+        <option value="desc">Desc</option>
+    </select> 
+    <input type="text" name="search" id="search">
+    <button onclick="searchdata()">Search</button>
+    <br><br>
+    <input type="text" name="search1" id="" placeholder="Live search" oninput="getData(this)">
+    <br><br>
     <table border="2">
         <thead>
             <tr>
@@ -20,7 +30,7 @@
         </tbody>
     </table>
     <script>
-        let users = [
+        const users = [
             {
                 "id":101,
                 "name":"Test",
@@ -41,7 +51,7 @@
             },
             {
                 "id":104,
-                "name":"rtyty",
+                "name":"test",
                 "age":18,
                 "salary":14500
             },
@@ -52,20 +62,74 @@
                 "salary":35000
             }
         ]
-
-        let tr=''
-        let res = users.map((i)=>{
-            // template literal
-                tr += `
-                        <tr>
-                            <td>${i.id}</td>
-                            <td>${i.name}</td>
-                            <td>${i.age}</td>
-                            <td>${i.salary}</td>
-                        </tr>
-                `
+        let users_copy = users.map((i)=>{
+            return i
         })
-        document.getElementById('userlist').innerHTML = tr
+        const ageOrder = ()=>{          
+            let order = document.getElementById("ageorder").value
+            if(order == 'asc'){
+                users_copy.sort((a,b)=>{
+                        return a.age-b.age
+                })
+                display(users_copy)
+            }
+            else if(order == 'desc'){
+                users_copy.sort((a,b)=>{
+                        return b.age-a.age
+                })
+                display(users_copy)
+                
+            } else {
+                display(users)
+            }
+           
+        }
+        const display = (udata)=>{
+            let tr=''
+            let res = udata.map((i)=>{
+                // template literal
+                    tr += `
+                            <tr>
+                                <td>${i.id}</td>
+                                <td>${i.name}</td>
+                                <td>${i.age}</td>
+                                <td>${i.salary}</td>
+                            </tr>
+                    `
+            })
+            document.getElementById('userlist').innerHTML = tr
+        }
+
+        const searchdata=()=>{
+            let srcdata = document.getElementById('search').value;
+            if(srcdata != ''){
+                let data = users_copy.filter((i)=>{
+                    return i.name.toUpperCase() == srcdata.toUpperCase()
+                })
+                display(data)
+            } else {
+                display(users)
+            }
+            
+        }
+
+        const getData=(e)=>{
+            let srcdata = e.value;
+            if(srcdata != ''){
+                let data = users_copy.filter((i)=>{
+                    let nm = i.name.toLowerCase()
+                    let dt = srcdata.toLowerCase()                   
+                    if(nm.includes(dt)){
+                        return i
+                    }
+                })
+                display(data)
+            }  else {
+                display(users)
+            }
+            
+        }
+        display(users)
     </script>
 </body>
 </html>

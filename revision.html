@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [10,20,30,40,50]
+        let str_arr = ["abx","xyz","pqr","dfjkgh","fghgh","ioruyoi"]
+        let str_arr2 = ["pqr","jdfg","iyyu"]
+        //... - spread operator //Rest of operator
+        const [a,b,c,...d] = str_arr //destructing
+        document.write('<br> '+a)
+        document.write('<br> '+b)
+        document.write('<br> '+c)
+        document.write('<br> '+d)
+
+        const merge_array = [...str_arr,...str_arr2]
+        document.write('<br> '+merge_array)
+        
+        
+        
+    </script>
+</body>
+</html>
