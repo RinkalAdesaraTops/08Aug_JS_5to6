@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //oop 
+        /*
+            class,object
+            inheritance
+            polymorphism
+            abstraction & encapsulation
+        */
+    class emp{
+        a=10
+        abc(){
+            console.log("A is "+this.a);          
+        }
+    }
+    let obj = new emp()
+    obj.abc()
+    //Constructor
+    class user{
+        constructor(a,b){
+            this.no1 = a
+            this.no2 = b          
+        }
+        add(){
+            document.write('<br> Addition is '+(this.no1+this.no2))           
+        }
+    }
+    let obj1 = new user(20,30)
+    obj1.add()
+    </script>
+</body>
+</html>

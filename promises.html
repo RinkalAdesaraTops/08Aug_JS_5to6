@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // callback function
+        //callback hell - solution - promises
+        const add = (a,b)=>{
+            console.log("Addition is ",(a+b));
+            cube(a)
+        }
+        const cube = (p)=>{
+            console.log("Cube is "+(p**3));
+            minus(p)
+        }
+        const minus = (a)=>{
+            console.log("Minus is "+(--a));         
+        }
+
+        add(8,5)
+
+        //3 stage -- 
+        //promises -- pending
+        //2nd oct -- fulfilled/resolve
+        //rejected
+        let pr = new Promise((resolve,reject)=>{
+                let age = 15
+                if(age>=18){
+                    resolve("Eligible 4 vote")
+                } else {
+                    reject("Not Eligible 4 vote")
+                }
+        })
+        pr.then((msg)=>console.log(msg))
+        .catch((err)=>console.log("Error generated --- "+err))
+    </script>
+</body>
+</html>

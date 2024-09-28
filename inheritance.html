@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //method overriding  - polymorphism
+        class abc{
+            constructor(){
+                console.log("Abc class called..");                
+            }
+            add(a,b){
+                return a+b
+            }
+            display(){
+                console.log("addition is "+this.add(200,100));                
+            }
+        }
+        class xyz extends abc{
+            constructor(){
+                super()
+                console.log("xyz class called..");                
+            }
+            minus(a,b){
+                return a-b
+            }
+            display(){
+                
+                console.log("minus is "+this.minus(200,100)); 
+                super.display()               
+            }
+        }
+        let obj = new xyz()
+        obj.display()
+        // document.write('<br> Addition is '+(obj.add(35,25)))
+        // document.write('<br> Minus is '+(obj.minus(35,25)))
+        
+    </script>
+</body>
+</html>
