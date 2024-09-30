@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>All Products </h4>
+    <table border="2" align="center">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody id="alldata">
+        </tbody>
+    </table>
+    <script>
+        fetch('https://fakestoreapi.com/products')
+        .then((res)=>res.json())
+        .then((result)=>{
+            let tr = '';
+            result.map((i)=>{
+                tr += `
+                        <tr>
+                            <td>${i.id}</td>
+                            <td>${i.title}</td>
+                            <td>${i.price}</td>
+                            <td>${i.category}</td>
+                            <td><img src=${i.image} height="30px" width="30px"/></td>
+                        </tr>
+                
+                `
+            })
+            document.getElementById('alldata').innerHTML = tr
+        })
+    </script>
+</body>
+</html>

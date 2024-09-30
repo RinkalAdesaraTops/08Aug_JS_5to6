@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //callback function
+        //synchronous - Async
+        //solution - promises
+        let pr = new Promise((resolve,reject)=>{
+            let age = 25
+            if(age>=18){
+                resolve("Eligible 4 vote")
+            } else {
+                reject("Not eligible 4 vote")
+            }          
+        }).then((msg)=>{
+            console.log(msg)
+            return "hello"
+        }).then((msg)=>console.log("Another then block---"+msg))
+            .catch((msg)=>console.log(msg))
+
+    </script>
+</body>
+</html>
