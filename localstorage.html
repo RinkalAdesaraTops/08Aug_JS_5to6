@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <button onclick="rmvData()">Remove Name</button>
+    <button onclick="clrData()">Clear All</button>
+    <script>
+        localStorage.setItem("name","Testing")
+        localStorage.setItem("age","25")
+        let name = localStorage.getItem("name")
+        let age = localStorage.getItem("age")
+        document.getElementById("demo").innerHTML = "Name & Age is "+(name)+"---"+age
+        const rmvData = ()=>{
+            localStorage.removeItem("name")
+        }
+        const clrData = ()=>{
+            localStorage.clear()
+        }
+        
+    </script>
+</body>
+</html>
