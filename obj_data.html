@@ -56,13 +56,22 @@
         })
         console.log(result);
         const arr = ["abc","xyz","pqr","abc","x1","xyz","p2","xyz"]
-        const obj1 = {
-            "abc":2,
-            "xyz":3,
-            "pqr":1,
-            "x1":1,
-            "p2":1
-        }
+
+        let res = arr.reduce((total,a)=>{
+            if(!total[a]){
+                total[a] = 1
+            } else {
+                total[a]++
+            }
+            return total
+        },{})
+        // const obj1 = {
+        //     "abc":2,
+        //     "xyz":3,
+        //     "pqr":1,
+        //     "x1":1,
+        //     "p2":1
+        // }
 
         
     </script>

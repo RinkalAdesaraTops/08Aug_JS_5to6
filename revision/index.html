@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //class object inheritance polymorphism encapsulation abstraction
+        // class user{
+        //     constructor(){ //special member func
+        //         this.a = 25
+        //     }
+        //     disp(a,b){ //normal func
+        //         console.log("A is "+this.a);    
+        //         console.log("Addition is "+(a+b));
+                           
+        //     }
+        // }
+        // let obj = new user()
+        // obj.disp(25,35)
+
+        // Inheritance concept 
+        class abc{
+            constructor(){
+                console.log('abc constructor called...');               
+            }
+            disp(){
+                console.log('disp - ABC called..');              
+            }
+        } 
+        class xyz extends abc{
+            constructor(){
+                super()
+                console.log('xyz constructor called...');               
+            }
+            disp(){
+                super.disp()
+                console.log('display 1 data');                
+            }
+        }
+        let obj = new xyz()
+        // obj.disp1()
+        obj.disp()
+    </script>
+</body>
+</html>
